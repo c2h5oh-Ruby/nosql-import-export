@@ -2,7 +2,7 @@ var cradle = require("cradle")
 , util = require("util")
 , fs = require("fs");
 
-var filename = "airports2.json";
+var filename = "ap.json";
 var i = 0;
 var connection = new(cradle.Connection)("localhost", 6660);
 var db = connection.database('airports');

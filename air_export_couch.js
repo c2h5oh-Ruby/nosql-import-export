@@ -7,8 +7,8 @@ var connection = new(cradle.Connection)("localhost", 6660);
 var db = connection.database('airports');
 var ids = new Array();
 var counter = 0;
-var log = fs.createWriteStream('airports2.json', {'flags': 'a'});
-var log2 = fs.createWriteStream('airports2.json', {'flags': 'w'});
+var log = fs.createWriteStream('ap.json', {'flags': 'a'});
+var log2 = fs.createWriteStream('ap.json', {'flags': 'w'});
 log2.write("");
 log.write('{"data":[');
 db.all(function(err, doc) {
