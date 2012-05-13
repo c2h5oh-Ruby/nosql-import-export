@@ -54,6 +54,13 @@ node air_import_elasticsearch.js
 
 MapReduce
  
+* Skrypt types.js liczy lostniska poszczególnych typów (small_airport, heliport, seaplane_base, closed ).
 
+```sh
+mongo types.js --shell
+```
+a później 
 
-
+```
+db.air_mr.show()
+```
