@@ -54,7 +54,7 @@ node air_import_elasticsearch.js
 
 MapReduce
  
-* Skrypt types.js liczy lostniska poszczególnych typów (small_airport, heliport, seaplane_base, closed ).
+* Skrypt dla mongodb types.js liczy lotniska poszczególnych typów (small_airport, heliport, seaplane_base, closed ) na kolekcji airports w bazie danych test.
 
 ```sh
 mongo types.js --shell
