@@ -77,7 +77,7 @@ Dane: ap.json, są to dane lotnisk w USA
                 "wikipedia_link":"",
                 "keywords":""
         }
-```sh
+```
 
 
 * skrypt dla mongodb types.js liczy lotniska poszczególnych typów (small_airport, heliport, seaplane_base, closed ) na kolekcji airports w bazie danych test.
