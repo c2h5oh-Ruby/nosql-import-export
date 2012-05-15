@@ -2,30 +2,6 @@
 
 ##Import - export
 
-Dane: ap.json, są to dane lotnisk w USA
-
-* Dane są tablicą "data".
-
-* Dane zawierają pola:
-	* id
-	* ident
-	* type
-	* name
-	* latitude_deg
-	* longitude_deg
-	* elevation_ft
-	* continent
-	* iso_country
-	* iso_region
-	* muncipality
-	* scheduled_service
-	* gps_code
-	* iata_code
-	* local_code
-	* home_link
-	* wikipedia_link
-	* keywords
-
 Skrypty
 
 * air_import_couch.js : importuje dane z pliku ap.json do bazy airports
@@ -52,9 +28,59 @@ node air_import_mongo.js
 node air_import_elasticsearch.js
 ```
 
-MapReduce
+##MapReduce
  
-* Skrypt dla mongodb types.js liczy lotniska poszczególnych typów (small_airport, heliport, seaplane_base, closed ) na kolekcji airports w bazie danych test.
+Dane: ap.json, są to dane lotnisk w USA
+
+* dane zawarte są w tablicy "data"
+
+```sh
+{"data" :[
+        	{
+		...# dane
+		}
+	 ]
+}
+```
+
+* dane zawierają pola:
+	* id
+	* ident
+	* type
+	* name
+	* ...
+	* local_code
+	* home_link
+	* wikipedia_link
+	* keywords
+
+* przykładowy zestaw danych lotniska:
+
+```sh
+ {
+                "id":"6523",
+                "ident":"00A",
+                "type":"heliport",
+                "name":"Total Rf Heliport",
+                "latitude_deg":"40.07080078125",
+                "longitude_deg":"-74.9336013793945",
+                "elevation_ft":"11",
+                "continent":"NA",
+                "iso_country":"US",
+                "iso_region":"US-PA",
+                "municipality":"Bensalem",
+                "scheduled_service":"no",
+                "gps_code":"00A",
+                "iata_code":"",
+                "local_code":"00A",
+                "home_link":"",
+                "wikipedia_link":"",
+                "keywords":""
+        }
+```sh
+
+
+* skrypt dla mongodb types.js liczy lotniska poszczególnych typów (small_airport, heliport, seaplane_base, closed ) na kolekcji airports w bazie danych test.
 
 ```sh
 mongo types.js --shell
