@@ -90,3 +90,10 @@ a później
 ```
 db.air_mr.show()
 ```
+Wyniki:
+```sh
+{ "_id" : "closed", "value" : 2 }
+{ "_id" : "heliport", "value" : 104 }
+{ "_id" : "seaplane_base", "value" : 8 }
+{ "_id" : "small_airport", "value" : 185 }
+```
